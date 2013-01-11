@@ -3,7 +3,7 @@
  * Plugin Name: Genesis 404
  * Plugin URI: https://github.com/billerickson/Genesis-404-Plugin
  * Description: Customize the content of your 404 page.
- * Version: 1.0
+ * Version: 1.1
  * Author: Bill Erickson
  * Author URI: http://www.billerickson.net
  *
@@ -63,6 +63,9 @@ class BE_Genesis_404 {
 		
 		// Check to see if should be used
 		add_action( 'genesis_meta', array( $this, 'maybe_custom_404' ) );
+		
+		// Search Shortcode
+		add_shortcode( 'genesis-404-search', array( $this, 'search_shortcode' ) );
 
 	}	
 
@@ -102,6 +105,16 @@ class BE_Genesis_404 {
 
 		echo '</div>';
 	
+	}
+	
+	/**
+	 * Search Shortcode
+	 *
+	 * @since 1.1
+	 * @author Bill Erickson
+	 */
+	function search_shortcode() {
+		return '<div class="genesis-404-search">' . get_search_form( false ) . '</div>';
 	}
 
 

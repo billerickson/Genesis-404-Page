@@ -102,8 +102,12 @@ class BE_Genesis_404 {
 			if( !empty( $title ) )
 				echo '<header class="entry-header"><h1 class="entry-title" itemprop="headline">' . $title . '</h1></header>';
 			
+			do_action( 'genesis_404_before_content' );
+			
 			if( !empty( $content ) )	
 				echo '<div class="entry-content" itemprop="text">' . apply_filters( 'the_content', $content ) . '</div>';
+				
+			do_action( 'genesis_404_after_content' );
 				
 			echo '</article>';
 		
@@ -115,8 +119,12 @@ class BE_Genesis_404 {
 			if (!empty( $title ) )
 				echo '<h1 class="entry-title">' . $title . '</h1>';
 				
+			do_action( 'genesis_404_before_content' );
+				
 			if( !empty( $content ) )
 				echo '<div class="entry-content">' . apply_filters( 'the_content', $content ) . '</div>';
+				
+			do_action( 'genesis_404_after_content' );
 	
 			echo '</div>';
 		}

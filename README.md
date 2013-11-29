@@ -1,15 +1,15 @@
 # Genesis 404 Page
 
-Customize the content of the 404 Page within the Genesis Theme Framework.
+Customize the content of the 404 Page within the Genesis Framework.
 
 ## Description
 
-Customizing the contents of the Page Not Found page in any WordPress theme can be tricky, and usually involes editing the 404.php template file. The Genesis Framework already abstracts the default content of the page into a function, and this plugin can unhook that and replace it with your own custom title and content.
+Customizing the contents of the _Page Not Found_ page in any WordPress theme can be tricky, and usually involes editing the 404.php template file. The Genesis Framework already abstracts the default content of the page into a function, and this plugin can unhook that and replace it with your own custom title and content.
 
 ## Screenshots
 
-![Alt text for screenshot 1 HERE](assets/screenshot-1.png)  
-_Screenshot 1 caption HERE._
+![Screenshot showing input for custom 404 Not Found title and content](assets/screenshot-1.png)  
+_Admin screen showing the fields for custom 404 Not Found page title and content._
 
 ## Requirements
  * WordPress 3.0+

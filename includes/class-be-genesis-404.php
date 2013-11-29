@@ -36,7 +36,7 @@ class BE_Genesis_404 {
 	 *
 	 * @type string
 	 */
-	const PLUGIN_SLUG = 'genesis-404';
+	const PLUGIN_SLUG = 'genesis-404-page';
 
 	/**
 	 * Initialize the plugin by setting localization and new site activation hooks.
@@ -155,7 +155,7 @@ class BE_Genesis_404 {
 	private static function single_activate() {
 		if ( 'genesis' !== basename( TEMPLATEPATH ) ) {
 			deactivate_plugins( plugin_dir_path( plugin_basename( __FILE__ ) ) . 'plugin.php' );
-			wp_die( sprintf( __( 'Sorry, you can&rsquo;t activate unless you have installed <a href="%s">Genesis</a>', 'genesis-404' ), 'http://www.billerickson.net/get-genesis' ) );
+			wp_die( sprintf( __( 'Sorry, you can&rsquo;t activate unless you have installed <a href="%s">Genesis</a>', 'genesis-404-page' ), 'http://www.billerickson.net/get-genesis' ) );
 		}
 	}
 

@@ -15,7 +15,7 @@
  * Version:           1.2.0
  * Author:            Bill Erickson
  * Author URI:        http://www.billerickson.net
- * Text Domain:       genesis-404
+ * Text Domain:       genesis-404-page
  * License:           GPL-2.0+
  * License URI:       http://www.gnu.org/licenses/gpl-2.0.txt
  * Domain Path:       /languages

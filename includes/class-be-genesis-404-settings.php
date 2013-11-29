@@ -30,8 +30,8 @@ class BE_Genesis_404_Settings extends Genesis_Admin_Boxes {
 		$menu_ops = array(
 			'submenu' => array(
 				'parent_slug' => 'genesis',
-				'page_title'  => __( 'Genesis 404 Page', 'genesis-404' ),
-				'menu_title'  => __( '404 Page', 'genesis-404' ),
+				'page_title'  => __( 'Genesis 404 Page', 'genesis-404-page' ),
+				'menu_title'  => __( '404 Page', 'genesis-404-page' ),
 			)
 		);
 
@@ -93,7 +93,7 @@ class BE_Genesis_404_Settings extends Genesis_Admin_Boxes {
 	 */
 	public function metaboxes() {
 
-		add_meta_box( 'metabox_404', __( '404 Page', 'genesis-404' ), array( $this, 'metabox_404' ), $this->pagehook, 'main', 'high' );
+		add_meta_box( 'metabox_404', __( '404 Page', 'genesis-404-page' ), array( $this, 'metabox_404' ), $this->pagehook, 'main', 'high' );
 
 	}
 
@@ -104,14 +104,14 @@ class BE_Genesis_404_Settings extends Genesis_Admin_Boxes {
 	 */
 	public function metabox_404() {
 		?>
-		<p><?php _e( 'The <i>404 Page</i> is the page shown when the intended page was not found. You can customise it here.', 'genesis-404' ); ?></p>
+		<p><?php _e( 'The <i>404 Page</i> is the page shown when the intended page was not found. You can customise it here.', 'genesis-404-page' ); ?></p>
 		<p>
-			<label for="<?php echo $this->get_field_id( 'title' ); ?>"><?php _e( 'Page Title:', 'genesis-404' ); ?></label><br />
+			<label for="<?php echo $this->get_field_id( 'title' ); ?>"><?php _e( 'Page Title:', 'genesis-404-page' ); ?></label><br />
 			<input type="text" name="<?php echo $this->get_field_name( 'title' ); ?>" id="<?php echo $this->get_field_id( 'title' ); ?>" value="<?php echo esc_attr( $this->get_field_value( 'title' ) ); ?>" size="27" class="widefat" />
 		</p>
 
 		<p>
-			<label for="<?php echo $this->get_field_id( 'content' ); ?>"><?php _e( 'Page Content:', 'genesis-404' ); ?></label><br />
+			<label for="<?php echo $this->get_field_id( 'content' ); ?>"><?php _e( 'Page Content:', 'genesis-404-page' ); ?></label><br />
 			<?php wp_editor( genesis_get_option( 'content', 'genesis-404' ), $this->get_field_id( 'content' ) );?>
 		</p>
 		<?php
@@ -127,8 +127,8 @@ class BE_Genesis_404_Settings extends Genesis_Admin_Boxes {
 		$screen = get_current_screen();
 
 		$help =
-			'<p>'  . __( 'To customize the 404 Not Found page in your Genesis child theme, enter a title and content.', 'genesis-404' ) . '</p>' .
-			'<p>'  . __( 'If you want to display the search form, use the shortcode [genesis-404-search].', 'genesis-404' ) . '</p>';
+			'<p>'  . __( 'To customize the 404 Not Found page in your Genesis child theme, enter a title and content.', 'genesis-404-page' ) . '</p>' .
+			'<p>'  . __( 'If you want to display the search form, use the shortcode [genesis-404-search].', 'genesis-404-page' ) . '</p>';
 
 		$screen->add_help_tab( array(
 			'id'      => $this->pagehook,
@@ -139,8 +139,8 @@ class BE_Genesis_404_Settings extends Genesis_Admin_Boxes {
 		//* Add help sidebar
 		$screen->set_help_sidebar(
 			'<p><strong>' . __( 'For more information:', 'genesis' ) . '</strong></p>' .
-			'<p><a href="http://wordpress.org/support/plugin/genesis-404-page" target="_blank" title="' . esc_attr( __( 'Get Support', 'genesis-404' ) ) . '">' . __( 'Get Support', 'genesis-404' ) . '</a></p>' .
-			'<p><a href="https://github.com/billerickson/Genesis-404-Page" target="_blank" title="' . esc_attr( __( 'Plugin Source and Development', 'genesis-404' ) ) . '">' . __( 'Plugin Source and Development', 'genesis-404' ) . '</a></p>'
+			'<p><a href="http://wordpress.org/support/plugin/genesis-404-page" target="_blank" title="' . esc_attr( __( 'Get Support', 'genesis-404-page' ) ) . '">' . __( 'Get Support', 'genesis-404-page' ) . '</a></p>' .
+			'<p><a href="https://github.com/billerickson/Genesis-404-Page" target="_blank" title="' . esc_attr( __( 'Plugin Source and Development', 'genesis-404-page' ) ) . '">' . __( 'Plugin Source and Development', 'genesis-404-page' ) . '</a></p>'
 		);
 
 	}

@@ -18,15 +18,6 @@
 class BE_Genesis_404 {
 
 	/**
-	 * Plugin version, used for cache-busting of style and script file references.
-	 *
-	 * @since 1.3.0
-	 *
-	 * @type string VERSION Plugin version.
-	 */
-	const VERSION = '1.2.0';
-
-	/**
 	 * Unique identifier for your plugin.
 	 *
 	 * Use this value (not the variable name) as the text domain when internationalizing strings of text. It should

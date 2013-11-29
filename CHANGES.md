@@ -1,15 +1,16 @@
 # Changes to Genesis 404 Page
 
 ## 1.3.0 (2013-11-29)
-* Move classes into their own files (Gary Jones).
 * Add setup for unit tests (Gary Jones).
-* Improve documentation and code standards (Gary Jones).
+* Add contextual help.
+* Add support for GitHub Updater plugin (Gary Jones).
+* Improved appearance of page title input field (Gary Jones).
+* Improved loading of language files (Gary Jones).
 * Improve support for activation on multi-sites (Gary Jones).
-* Improved loading of language files.
-* Improved appearance of page title input field.
-* Fix incorrect plugin URL.
-* Fix incorrect textdomains.
-* Add support for GitHub Updater plugin
+* Improve documentation and code standards (Gary Jones).
+* Improve code organization by classes into their own files (Gary Jones).
+* Fix incorrect plugin URL (Gary Jones).
+* Fix incorrect textdomains (Gary Jones).
 
 ## 1.2.0 (2012-05-25)
 * Add HTML5 Support (Bill Erickson).

@@ -10,12 +10,21 @@ Customize the content of the 404 Page within the Genesis Framework.
 
 == Description ==
 
-Once installed, you can customize your 404 page's title and content in Genesis > 404 Page. 
+Customizing the contents of the _Page Not Found_ page in any WordPress theme can be tricky, and usually involes editing the 404.php template file. The Genesis Framework already abstracts the default content of the page into a function, and this plugin can unhook that and replace it with your own custom title and content.
 
 Use [genesis-404-search] shortcode to add a search form to the page.
 
 If you'd like to dynamically list content (ex: most recent posts), I recommend you install the [Display Posts Shortcode](http://www.wordpress.org/extend/plugins/display-posts-shortcode/) and use it in the 404 page's content.
 
+== Installation ==
+
+1. Upload `genesis-404-page` to the `/wp-content/plugins/` directory
+1. Activate the plugin through the 'Plugins' menu in WordPress
+1. Customize your 404 page's title and content in Genesis > 404 Page. 
+
+== Screenshots ==
+
+1. Admin screen showing the fields for custom 404 Not Found page title and content.
 
 == Changelog ==
 
@@ -38,3 +47,8 @@ If you'd like to dynamically list content (ex: most recent posts), I recommend y
 
 = 1.0.0 (2012-03-27) =
 * Initial release (Bill Erickson).
+
+== Upgrade Notice ==
+
+= 1.3.0 =
+Plugin mostly rewritten. Few small fixes made and improvements added.

@@ -242,7 +242,7 @@ function be_register_genesis_404_settings() {
 	
 	
 		echo '<p>' . __( 'Page Content', 'genesis-404' ) . '</p>';
-		wp_editor( genesis_get_option( 'content', 'genesis-404' ), $this->get_field_id( 'content' ) ); 
+		wp_editor( genesis_get_option( 'content', 'genesis-404' ), 'content', array( 'textarea_name' => $this->get_field_id( 'content' ), ) );  
 		}
 	
 	

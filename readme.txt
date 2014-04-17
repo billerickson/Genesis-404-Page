@@ -3,8 +3,8 @@ Contributors: billerickson
 Donate link: https://www.paypal.com/cgi-bin/webscr?cmd=_s-xclick&hosted_button_id=EDYM76U6BTE5L
 Tags: genesis, genesiswp, 404, 
 Requires at least: 3.0
-Tested up to: 3.6
-Stable tag: 1.2
+Tested up to: 3.9
+Stable tag: 1.3
 
 Customize the content of the 404 Page within the Genesis Theme Framework.
 
@@ -18,6 +18,9 @@ If you'd like to dynamically list content (ex: most recent posts), I recommend y
 
 
 == Changelog ==
+
+= 1.3 =
+* Updated editor for WordPress 3.9, props @joshuadavidnelson
 
 = 1.2 = 
 * Add HTML5 Support

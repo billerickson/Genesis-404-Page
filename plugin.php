@@ -1,7 +1,7 @@
 <?php
 /**
  * Plugin Name: Genesis 404
- * Plugin URI: https://github.com/billerickson/Genesis-404-Plugin
+ * Plugin URI: https://github.com/billerickson/Genesis-404-Page
  * Description: Customize the content of your 404 page.
  * Version: 1.3
  * Author: Bill Erickson

@@ -3,8 +3,8 @@ Contributors: billerickson, GaryJ
 Donate link: https://www.paypal.com/cgi-bin/webscr?cmd=_s-xclick&hosted_button_id=EDYM76U6BTE5L
 Tags: genesis, genesiswp, 404, 
 Requires at least: 3.0
-Tested up to: 3.8
-Stable tag: 1.3
+Tested up to: 3.9
+Stable tag: 1.4
 
 Customize the content of the 404 Page within the Genesis Framework.
 
@@ -28,7 +28,7 @@ If you'd like to dynamically list content (ex: most recent posts), I recommend y
 
 == Changelog ==
 
-= 1.3.0 (2013-11-29) =
+= 1.4.0 (2014-10-08) =
 * Add setup for unit tests (Gary Jones).
 * Add support for GitHub Updater plugin (Gary Jones).
 * Improved appearance of page title input field (Gary Jones).
@@ -38,6 +38,9 @@ If you'd like to dynamically list content (ex: most recent posts), I recommend y
 * Improve code organization by classes into their own files (Gary Jones).
 * Fix incorrect plugin URL (Gary Jones).
 * Fix incorrect textdomains (Gary Jones).
+
+= 1.3.0 (2014-04-17) =
+* Updated editor for WordPress 3.9, props @joshuadavidnelson
 
 = 1.2.0 (2012-05-25) =
 * Add HTML5 Support (Bill Erickson).
@@ -50,5 +53,5 @@ If you'd like to dynamically list content (ex: most recent posts), I recommend y
 
 == Upgrade Notice ==
 
-= 1.3.0 =
+= 1.4.0 =
 Plugin mostly rewritten. Few small fixes made and improvements added.

@@ -112,7 +112,7 @@ class BE_Genesis_404_Settings extends Genesis_Admin_Boxes {
 
 		<p>
 			<label for="<?php echo $this->get_field_id( 'content' ); ?>"><?php _e( 'Page Content:', 'genesis-404-page' ); ?></label><br />
-			<?php wp_editor( genesis_get_option( 'content', 'genesis-404' ), $this->get_field_id( 'content' ) );?>
+			<?php wp_editor( genesis_get_option( 'content', 'genesis-404' ), 'content', array( 'textarea_name' => $this->get_field_id( 'content' ), ) ); ?>
 		</p>
 		<?php
 	}

@@ -28,6 +28,9 @@ If you'd like to dynamically list content (ex: most recent posts), I recommend y
 
 == Changelog ==
 
+= 1.5.0 (2015-04-17) =
+* Add genesis layout support (Joshua David Nelson, @joshuadnelson)
+
 = 1.4.0 (2014-10-08) =
 * Add setup for unit tests (Gary Jones).
 * Add support for GitHub Updater plugin (Gary Jones).
@@ -40,7 +43,7 @@ If you'd like to dynamically list content (ex: most recent posts), I recommend y
 * Fix incorrect textdomains (Gary Jones).
 
 = 1.3.0 (2014-04-17) =
-* Updated editor for WordPress 3.9, props @joshuadavidnelson
+* Updated editor for WordPress 3.9, props @joshuadnelson
 
 = 1.2.0 (2012-05-25) =
 * Add HTML5 Support (Bill Erickson).
@@ -52,6 +55,9 @@ If you'd like to dynamically list content (ex: most recent posts), I recommend y
 * Initial release (Bill Erickson).
 
 == Upgrade Notice ==
+
+= 1.5.0 =
+Add support for overriding the genesis layout on 404 pages.
 
 = 1.4.0 =
 Plugin mostly rewritten. Few small fixes made and improvements added.

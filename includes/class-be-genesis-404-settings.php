@@ -74,6 +74,7 @@ class BE_Genesis_404_Settings extends Genesis_Admin_Boxes {
 			$this->settings_field,
 			array(
 				'title',
+				'genesis_layout',
 			)
 		);
 
@@ -94,9 +95,31 @@ class BE_Genesis_404_Settings extends Genesis_Admin_Boxes {
 	public function metaboxes() {
 
 		add_meta_box( 'metabox_404', __( '404 Page', 'genesis-404-page' ), array( $this, 'metabox_404' ), $this->pagehook, 'main', 'high' );
+		
+		if( apply_filters( 'genesis_404_layout_box', true ) )
+			add_meta_box( 'genesis_404_layout_box', __( 'Layout Settings', 'genesis' ), array( $this, 'layout_box' ), $this->pagehook, 'main', 'high' );
 
 	}
+	
+	/**
+	 * The layout metabox for the 404 page.
+	 *
+	 * @since 1.5.0
+	 */
+	public function layout_box() {
+		$layout = esc_attr( $this->get_field_value( 'genesis_layout' ) );
 
+		?>
+		<div class="genesis-layout-selector">
+			<p><input type="radio" name="<?php echo $this->get_field_name( 'genesis_layout' ); ?>" class="default-layout" id="default-layout" value="" <?php checked( $layout, '' ); ?> /> <label class="default" for="default-layout"><?php printf( __( 'Default Layout set in <a href="%s">Theme Settings</a>', 'genesis' ), menu_page_url( 'genesis', 0 ) ); ?></label></p>
+
+			<p><?php genesis_layout_selector( array( 'name' => $this->get_field_name( 'genesis_layout' ), 'selected' => $layout, 'type' => 'site' ) ); ?></p>
+		</div>
+
+		<br class="clear" />
+		<?php
+	}
+	
 	/**
 	 * 404 Metabox
 	 *

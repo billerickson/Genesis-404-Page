@@ -189,7 +189,7 @@ class BE_Genesis_404 {
 		}
 		
 		// Set layout
-		if ( $layout = genesis_get_option( 'genesis_layout', 'genesis-404' ) ) {
+		if ( genesis_get_option( 'genesis_layout', 'genesis-404' ) ) {
 			add_filter( 'genesis_pre_get_option_site_layout', array( $this, 'custom_layout' ) );
 		}
 	}

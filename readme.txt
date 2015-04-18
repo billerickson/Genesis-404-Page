@@ -4,7 +4,7 @@ Donate link: https://www.paypal.com/cgi-bin/webscr?cmd=_s-xclick&hosted_button_i
 Tags: genesis, genesiswp, 404, 
 Requires at least: 3.0
 Tested up to: 3.9
-Stable tag: 1.4
+Stable tag: 1.5.0
 
 Customize the content of the 404 Page within the Genesis Framework.
 

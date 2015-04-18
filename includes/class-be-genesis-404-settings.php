@@ -6,7 +6,7 @@
  * @author    Bill Erickson
  * @license   GPL-2.0+
  * @link      https://github.com/billerickson/Genesis-404-Page
- * @copyright 2012 Bill Erickson
+ * @copyright 2015 Bill Erickson
  */
 
 /**

@@ -6,7 +6,7 @@
  * @author    Bill Erickson
  * @license   GPL-2.0+
  * @link      https://github.com/billerickson/Genesis-404-Page
- * @copyright 2012 Bill Erickson
+ * @copyright 2015 Bill Erickson
  */
 
 /**
@@ -39,7 +39,7 @@ class BE_Genesis_404 {
 		add_action( 'init', array( $this, 'load_plugin_textdomain' ) );
 
 		// Check to see if should be used
-		add_action( 'genesis_before_loop', array( $this, 'maybe_custom_404' ) );
+		add_action( 'genesis_meta', array( $this, 'maybe_custom_404' ) );
 
 		// Search Shortcode
 		add_shortcode( 'genesis-404-search', array( $this, 'search_shortcode' ) );
@@ -179,9 +179,18 @@ class BE_Genesis_404 {
 	 * @author Bill Erickson
 	 */
 	public function maybe_custom_404() {
-		if ( is_404() && genesis_get_option( 'content', 'genesis-404' ) ) {
+		if( !is_404() )
+			return;
+		
+		// Replace content
+		if ( genesis_get_option( 'content', 'genesis-404' ) ) {
 			remove_action( 'genesis_loop', 'genesis_404' );
 			add_action( 'genesis_loop', array( $this, 'loop' ) );
+		}
+		
+		// Set layout
+		if ( genesis_get_option( 'genesis_layout', 'genesis-404' ) ) {
+			add_filter( 'genesis_pre_get_option_site_layout', array( $this, 'custom_layout' ) );
 		}
 	}
 
@@ -254,6 +263,28 @@ class BE_Genesis_404 {
 		do_action( 'genesis_404_after_content' );
 
 		echo '</div>';
+	}
+	
+	/**
+	 * Set the custom genesis layout.
+	 *
+	 * @since 1.5.0
+	 * @author Joshua David Nelson, josh@joshuadnelson.com
+	 *
+	 * @param string $layout The current layout.
+	 *
+	 * @return string $layout The modified layout.
+	 */
+	public function custom_layout( $layout ) {
+		$layout_404 = genesis_get_option( 'genesis_layout', 'genesis-404' );
+		
+		// Return the original layout if 'default' is selected
+		if ( $layout_404 == 'default' )
+			return $layout;
+		
+		// Return the custom layout
+		return $layout_404;
+		
 	}
 
 	/**

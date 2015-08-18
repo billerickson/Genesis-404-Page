@@ -12,7 +12,7 @@
  * Plugin Name:       Genesis 404
  * Plugin URI:        https://github.com/billerickson/Genesis-404-Page
  * Description:       Customize the content of your 404 (not found) page.
- * Version:           1.4.0
+ * Version:           1.5.0
  * Author:            Bill Erickson
  * Author URI:        http://www.billerickson.net
  * Text Domain:       genesis-404-page

@@ -1,5 +1,8 @@
 # Changes to Genesis 404 Page
 
+## 1.5.0 (2015-04-17)
+* Add genesis layout support (Joshua David Nelson, @joshuadnelson)
+
 ## 1.4.0 (2013-11-29)
 * Add setup for unit tests (Gary Jones).
 * Add contextual help.

@@ -46,6 +46,10 @@ class BE_Genesis_404 {
 
 		// Activate plugin when new blog is added
 		add_action( 'wpmu_new_blog', array( $this, 'activate_new_site' ) );
+
+		// Genesis 3.x: Theme settings in customizer
+		add_filter( 'genesis_customizer_theme_settings_config', array( $this, 'customizer_settings' ) );
+
 	}
 
 	/**
@@ -181,13 +185,13 @@ class BE_Genesis_404 {
 	public function maybe_custom_404() {
 		if( !is_404() )
 			return;
-		
+
 		// Replace content
 		if ( genesis_get_option( 'content', 'genesis-404' ) ) {
 			remove_action( 'genesis_loop', 'genesis_404' );
 			add_action( 'genesis_loop', array( $this, 'loop' ) );
 		}
-		
+
 		// Set layout
 		if ( genesis_get_option( 'genesis_layout', 'genesis-404' ) ) {
 			add_filter( 'genesis_pre_get_option_site_layout', array( $this, 'custom_layout' ) );
@@ -264,7 +268,7 @@ class BE_Genesis_404 {
 
 		echo '</div>';
 	}
-	
+
 	/**
 	 * Set the custom genesis layout.
 	 *
@@ -277,14 +281,14 @@ class BE_Genesis_404 {
 	 */
 	public function custom_layout( $layout ) {
 		$layout_404 = genesis_get_option( 'genesis_layout', 'genesis-404' );
-		
+
 		// Return the original layout if 'default' is selected
 		if ( $layout_404 == 'default' )
 			return $layout;
-		
+
 		// Return the custom layout
 		return $layout_404;
-		
+
 	}
 
 	/**
@@ -297,4 +301,47 @@ class BE_Genesis_404 {
 		return '<div class="genesis-404-search">' . get_search_form( false ) . '</div>';
 	}
 
+	/**
+	 * Customizer settings
+	 *
+	 * @since 1.6.0
+	 */
+	public function customizer_settings( array $config ) {
+		$config['genesis-404'] = array(
+			'active_callback' => false,
+			'title'           => __( '404 Page Settings', 'genesis-404' ),
+			'description'     => '',
+			'settings_field'  => 'genesis-404',
+			'control_prefix'  => 'genesis-404',
+			'sections'        => array(
+				'genesis_404'    => array(
+					'title'    => __( '404 Page', 'genesis-404' ),
+					'panel'    => 'genesis-404',
+					'controls' => array(
+						'title' => array(
+							'label'    => __( 'Page Title', 'genesis-404' ),
+							'section'  => 'genesis_404',
+							'type'     => 'text',
+						),
+						'content' => array(
+							'label'    => __( 'Content', 'genesis-404' ),
+							'section'  => 'genesis_404',
+							'type'     => 'textarea',
+						),
+						'genesis_layout' => array(
+							'label'    => __( 'Layout', 'genesis-404' ),
+							'section'  => 'genesis_404',
+							'type'     => 'select',
+							'choices'  => genesis_get_layouts_for_customizer(),
+							'settings' => array(
+								'default' => '',
+							),
+
+						)
+					)
+				)
+			)
+		);
+		return $config;
+	}
 }
